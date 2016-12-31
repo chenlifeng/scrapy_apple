@@ -4,5 +4,5 @@
 並且它使用了Twitsted的非同步框架，可以較快速的去剖析網頁。  
 # 安裝  
 我的安裝方法是  
-1.先下載 [Anaconda](https://www.continuum.io/downloads) 這個python的資料處理平台 
-2.在Anaconda Prompt中安裝Scrapy: pip install scrapy 即可  
+1.先下載 [Anaconda](https://www.continuum.io/downloads) 這個python的資料處理平台  
+2.接著在Anaconda Prompt中安裝Scrapy: pip install scrapy 即可
