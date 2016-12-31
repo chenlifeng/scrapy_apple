@@ -5,4 +5,6 @@
 # 安裝  
 我的安裝方法是  
 1.先下載 [Anaconda](https://www.continuum.io/downloads) 這個python的資料處理平台  
-2.接著在Anaconda Prompt中安裝Scrapy: pip install scrapy 即可
+2.接著在Anaconda Prompt中安裝Scrapy: pip install scrapy 即可  
+# 架構  
+![Scrapy architecture] (http://www.programering.com/images/remote/ZnJvbT1jc2RuJnVybD1uNUdjdVVtYzFSM1lsUlhhb05tY2g5VmV3Rm1jak4zTHpWMlpoMVdhZjlDZHpWR2RoeDJMT04wWG9wM0xuSjNidU0zWXZSV1pvUkhaaFZtY3VNSGFqMVNld0ZtY2pOM0x2b0RjMFJIYQ.jpg)
