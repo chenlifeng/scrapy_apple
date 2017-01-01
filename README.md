@@ -50,6 +50,6 @@ crawler.py；此為主要撰寫的python檔案
 ## Demo程式  
 在這個demo程式中透過Scrapy的CrawlSpider去實現多個網頁的爬取，爬取的網頁為[蘋果即時新聞](http://www.appledaily.com.tw/realtimenews/section/new/)  
 此程式預設為一次爬取蘋果即時新聞中十頁的新聞清單連結，  
-並去抓取新聞清單連結中的標題、內容、以及時間，然後存入sqlite3的資料庫，  
+並去抓取新聞清單連結中的標題、內容、以及時間，然後存入sqlite3的資料庫，  
 之後可以透過sqlite studio去開啟applenews.sqlite確認資料庫的內容  
 ## 程式解說  
