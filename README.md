@@ -56,7 +56,7 @@ crawler.py；此為主要撰寫的python檔案。  
 ### settings.py：  
 由於我們使用到pipelines.py這個檔案，因此需要去settings.py中加上：  
 ITEM_PIPELINES = {  
-  'applenews.pipelines.ApplenewsPipeline': 300,  
+ 'applenews.pipelines.ApplenewsPipeline': 300,  
 }  
 ### items.py：  
 在items.py我定義了title、content、time這三個欄位，供parse完的資料處理。  
