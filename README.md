@@ -54,7 +54,7 @@ crawler.py；此為主要撰寫的python檔案。  
 之後可以透過sqlite studio去開啟applenews.sqlite確認資料庫的內容。  
 ## 程式解說  
 ### settings.py：  
-由於我們使用到pipelines.py這個檔案，因此需要去settings.py中加上：  
+由於我們使用到pipelines.py這個檔案，因此需要去settings.py中加上：  
 ITEM_PIPELINES = {  
  'applenews.pipelines.ApplenewsPipeline': 300,  
 }  
