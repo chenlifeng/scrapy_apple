@@ -36,16 +36,16 @@ item pipelines負責處理spider從網頁中parse完的item，它的主要任務
 ## Selectors  
 Scrapy提供了XPath和CSS兩個selector：  
 關於XPath下面提供幾個簡單的用法：  
-/html/head/title:選擇HTML文檔中head標籤內的title元素  
-/html/head/title/text():選擇上面提到的title元素的文字。  
-//td:選擇所有的td元素。    
-//div[@class="mine"]:選擇所有具有class="mine"屬性的div元素。    
-另外除了這兩個selectors也可以使用BeautifulSoup或其他的library。  
+/html/head/title:選擇HTML文檔中head標籤內的title元素。  
+/html/head/title/text():選擇上面提到的title元素的文字。  
+//td:選擇所有的td元素。  
+//div[@class="mine"]:選擇所有具有class="mine"屬性的div元素。  
+另外除了這兩個selectors也可以使用BeautifulSoup或其他的library。  
 關於Scrapy的詳細selector教學可以點[這裡] (https://doc.scrapy.org/en/0.20/topics/selectors.html)。  
 ## Project架構  
-items.py：可以透過撰寫items.py去定義parse完資料的欄位(數據性的結構方便處理 類似dictionary)  
-settings.py：定義project的設定  
-pipelines.py：可以透過撰寫pipelines.py去清理網頁資料、驗證抓取資料、去重覆化、將資料儲存至資料庫    
+items.py：可以透過撰寫items.py去定義parse完資料的欄位。(數據性的結構方便處理 類似dictionary)  
+settings.py：定義project的設定。  
+pipelines.py：可以透過撰寫pipelines.py去清理網頁資料、驗證抓取資料、去重覆化、將資料儲存至資料庫。  
 crawler.py；此為主要撰寫的python檔案。  
 ## Demo程式  
 在這個demo程式中透過Scrapy的CrawlSpider去實現多個網頁的爬取，爬取的網頁為[蘋果即時新聞](http://www.appledaily.com.tw/realtimenews/section/new/)  
@@ -53,10 +53,10 @@ crawler.py；此為主要撰寫的python檔案。  
 並去抓取新聞清單連結中的標題、內容、以及時間，然後存入sqlite3的資料庫，  
 之後可以透過sqlite studio去開啟applenews.sqlite確認資料庫的內容  
 ## 程式解說  
-# settings.py：  
+### settings.py：  
 由於我們使用到pipelines.py這個檔案，因此需要去settings.py中加上：  
 ITEM_PIPELINES = {  
  'applenews.pipelines.ApplenewsPipeline': 300,  
 }  
-# items.py：  
-在items.py我定義了title、content、time這三個欄位，供parse完的資料處理。  
+### items.py：  
+在items.py我定義了title、content、time這三個欄位，供parse完的資料處理。  
