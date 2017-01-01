@@ -28,10 +28,11 @@ item pipelines負責處理spider從網頁中parse完的item，它的主要任務
 1.scrapy startproject applenews (創建一個名為applenews的project)  
 2.scrapy crawl applenews (執行applenews這個spider，spider的名稱定義在crawl.py中的name變數中)  
 3.scrapy crawl applenews -o applenews.json -t json (執行applenews這個spider，並將抓取到的資料輸出成json檔存入applenews.json中)  
-4.scrapy genspider mydomain mydomain.com (新增名為mydomain的spider)  
-5.scrapy fetch "url" (利用downloader下載指定的url)  
-6.scrapy parse "url" --spider=applenews 利用applenews這個spider去parse某個url網址  
-7.scrapy -h (察看更多的scrapy相關指令)  
+4.scrapy crawl applenews -s JOBDIR=job1：可以讓爬蟲工作分段進行(中止後下次會從中止點開始)  
+5.scrapy genspider mydomain mydomain.com (新增名為mydomain的spider)  
+6.scrapy fetch "url" (利用downloader下載指定的url)  
+7.scrapy parse "url" --spider=applenews 利用applenews這個spider去parse某個url網址  
+8.scrapy -h (察看更多的scrapy相關指令)  
 ## Selectors  
 Scrapy提供了XPath和CSS兩個selector  
 關於XPath下面提供幾個簡單的用法：  
@@ -46,3 +47,4 @@ items.py：可以透過撰寫items.py去定義parse完資料的欄位(數據性�
 settings.py：定義project的設定  
 pipelines.py：可以透過撰寫pipelines.py去清理網頁資料、驗證抓取資料、去重覆化、將資料儲存至資料庫    
 crawler.py；此為主要撰寫的python檔案  
+## Demo程式  
