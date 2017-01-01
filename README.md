@@ -20,7 +20,8 @@ spiders讓user自己定義用來解析網頁並抓取、制定URL返回的內容
 2.在parse()中，你可以利用不同的selector去parse網頁並返回項目對象和請求對像。這些請求也將包含一個callback，然後被Scrapy下載，並有指定的callback。  
 3.最後，從spider返回的項目會進到item pipelines。  
 ### Item Pipeline： 
-item pipelines負責處理spider從網頁中parse完的item，它的主要任務是萃取、驗證和存儲數據。  
-而數據處理流程如圖中標示的數字 (詳細流程可以點[這裡] (https://doc.scrapy.org/en/latest/topics/architecture.html))  
-
+item pipelines負責處理spider從網頁中parse完的item，它的主要任務是萃取、驗證和存儲數據。  
+  
+  
+而數據處理流程如圖中標示的數字 (詳細流程可以點[這裡] (https://doc.scrapy.org/en/latest/topics/architecture.html))
  
