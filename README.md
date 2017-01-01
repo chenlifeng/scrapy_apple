@@ -44,7 +44,7 @@ Scrapy提供了XPath和CSS兩個selector：  
 關於Scrapy的詳細selector教學可以點[這裡] (https://doc.scrapy.org/en/0.20/topics/selectors.html)。  
 ## Project架構  
 items.py：可以透過撰寫items.py去定義parse完資料的欄位。(數據性的結構方便處理 類似dictionary)  
-settings.py：定義project的設定。  
+settings.py：定義project的設定。  
 pipelines.py：可以透過撰寫pipelines.py去清理網頁資料、驗證抓取資料、去重覆化、將資料儲存至資料庫。  
 crawler.py；此為主要撰寫的python檔案。  
 ## Demo程式  
