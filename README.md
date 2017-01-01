@@ -34,9 +34,9 @@ item pipelines負責處理spider從網頁中parse完的item，它的主要任務
 7.scrapy parse "url" --spider=applenews 利用applenews這個spider去parse某個url網址  
 8.scrapy -h (察看更多的scrapy相關指令)  
 ## Selectors  
-Scrapy提供了XPath和CSS兩個selector：  
-關於XPath下面提供幾個簡單的用法：  
-/html/head/title:選擇HTML文檔中head標籤內的title元素。  
+Scrapy提供了XPath和CSS兩個selector：  
+關於XPath下面提供幾個簡單的用法：  
+/html/head/title:選擇HTML文檔中head標籤內的title元素。  
 /html/head/title/text():選擇上面提到的title元素的文字。  
 //td:選擇所有的td元素。  
 //div[@class="mine"]:選擇所有具有class="mine"屬性的div元素。  
