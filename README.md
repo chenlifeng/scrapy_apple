@@ -52,4 +52,10 @@ crawler.py；此為主要撰寫的python檔案
 此程式預設為一次爬取蘋果即時新聞中十頁的新聞清單連結，  
 並去抓取新聞清單連結中的標題、內容、以及時間，然後存入sqlite3的資料庫，  
 之後可以透過sqlite studio去開啟applenews.sqlite確認資料庫的內容  
-## 程式解說  
+## 程式解說  
+# settings.py：  
+由於我們使用到pipelines.py這個檔案，因此需要去settings.py中加上：  
+ITEM_PIPELINES = {  
+ 'applenews.pipelines.ApplenewsPipeline': 300,  
+}  
+# items.py：
