@@ -36,8 +36,8 @@ item pipelines負責處理spider從網頁中parse完的item，它的主要任務
 Scrapy提供了XPath和CSS兩個selector  
 關於XPath下面提供幾個簡單的用法：  
 /html/head/title:選擇HTML文檔中<head>標籤內的<title>元素  
-/html/head/title/text():選擇上面提到的<title>元素的文字  
-//td:選擇所有的<td>元素  
+/html/head/title/text():選擇上面提到的<title>元素的文字   
+//td:選擇所有的<td>元素  
 //div[@class="mine"]:選擇所有具有class="mine"屬性的div元素  
 另外除了這兩個selectors也可以使用BeautifulSoup或其他的library  
 關於Scrapy的詳細selector教學可以點[這裡] (https://doc.scrapy.org/en/0.20/topics/selectors.html)  
