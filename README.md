@@ -23,23 +23,12 @@ spiders讓user自己定義用來解析網頁並抓取、制定URL返回的內容
 item pipelines負責處理spider從網頁中parse完的item，它的主要任務是萃取、驗證和存儲數據。  
 ### 數據處理流程：  
 數據處理流程如圖中標示的數字 (詳細流程可以點[這裡] (https://doc.scrapy.org/en/latest/topics/architecture.html))  
-## Project架構  
-└── applenews
-    ├── applenews
-    │   ├── __init__.py
-    │   ├── __init__.pyc
-    │   ├── db.py
-    │   ├── db.pyc
-    │   ├── items.py　＃資訊欄位設定的檔案
-    │   ├── items.pyc
-    │   ├── pipelines.py ＃定義資料儲存、處理
-    │   ├── settings.py　＃設定檔
-    │   ├── settings.pyc
-    │   └── spiders
-    │       ├── __init__.py
-    │       ├── __init__.pyc
-    │       ├── applenews.py  #此為主要撰寫的檔案
-    │       ├── applenews.pyc
-    └── scrapy.cfg 設定檔
-
- 
+## Command Line Tool  
+在這邊簡單介紹幾個常用的command line指令：  
+1.scrapy startproject applenews (創建一個名為applenews的project)  
+2.scrapy crawl applenews (執行applenews這個spider，spider的名稱定義在crawl.py中的name變數中)  
+3.scrapy crawl applenews -o applenews.json -t json (執行applenews這個spider，並將抓取到的資料輸出成json檔存入applenews.json中)  
+4.scrapy genspider mydomain mydomain.com (新增名為mydomain的spider)  
+5.scrapy fetch "url" (利用downloader下載指定的url)  
+6.scrapy parse "url" --spider=applenews 利用applenews這個spider去parse某個url網址  
+7.scrapy -h (察看更多的scrapy相關指令)  
