@@ -59,4 +59,8 @@ ITEM_PIPELINES = {
  'applenews.pipelines.ApplenewsPipeline': 300,  
 }  
 ### items.py：  
-在items.py我定義了title、content、time這三個欄位，供parse完的資料處理。  
+在items.py我定義了title、content、time這三個欄位，供parse完的資料處理。  
+### pipelines.py：  
+在pipelines.py中我們將處理完的資料分為上述三個欄位insert到資料庫中。  
+### crawler.py：  
+在crawler.py中我們定義了如何去parse資料並將資料存為上述的格式。  
