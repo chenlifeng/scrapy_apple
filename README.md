@@ -31,4 +31,18 @@ item pipelines負責處理spider從網頁中parse完的item，它的主要任務
 4.scrapy genspider mydomain mydomain.com (新增名為mydomain的spider)  
 5.scrapy fetch "url" (利用downloader下載指定的url)  
 6.scrapy parse "url" --spider=applenews 利用applenews這個spider去parse某個url網址  
-7.scrapy -h (察看更多的scrapy相關指令)  
+7.scrapy -h (察看更多的scrapy相關指令)  
+## Selectors  
+Scrapy提供了XPath和CSS兩個selector  
+關於XPath下面提供幾個簡單的用法：  
+/html/head/title:選擇HTML文檔中<head>標籤內的<title>元素  
+/html/head/title/text():選擇上面提到的<title>元素的文字  
+//td:選擇所有的<td>元素  
+//div[@class="mine"]:選擇所有具有class="mine"屬性的div元素  
+另外除了這兩個selectors也可以使用BeautifulSoup或其他的library  
+關於Scrapy的詳細selector教學可以點[這裡] (https://doc.scrapy.org/en/0.20/topics/selectors.html)  
+## Project架構  
+items.py：可以透過撰寫items.py去定義parse完資料的欄位(數據性的結構方便處理 類似dictionary)  
+settings.py：定義project的設定  
+pipelines.py：可以透過撰寫pipelines.py去清理網頁資料、驗證抓取資料、去重覆化、將資料儲存至資料庫  
+crawler.py；此為主要撰寫的python檔案  
