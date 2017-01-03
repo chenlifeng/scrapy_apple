@@ -64,3 +64,8 @@ ITEM_PIPELINES = {
 在pipelines.py中我將處理完的資料分為上述三個欄位insert到資料庫中。  
 ### crawler.py：  
 在crawler.py中我定義了如何去parse資料並將資料存為上述的格式。  
+
+## 使用此程式  
+scrapy startporject applenews  
+進入applenews資料夾後將此repo內的檔案取代原先的檔案  
+scrapy crawl applenews 即可爬取蘋果即時新聞  
